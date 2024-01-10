@@ -9,6 +9,28 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <p><%= message %></p>
+    <h1><%= message %></h1>
+
+    <h2>Termékek:</h2>
+    <ul>
+      <% products.forEach(product => { %>
+        <li>
+          <%= product.nev %> - <%= product.ar %> ft
+          <a href="/cart/add/<%= product.id %>">Kosárba</a>
+        </li>
+      <% }); %>
+    </ul>
+  
+    <h2>Kosár:</h2>
+    <ul>
+      <% cart.forEach(productId => { %>
+        <li>
+          <% const product = products.find(p => p.id === productId); %>
+          <%= product ? product.nev : 'Unknown Product' %> - <%= product ? product.ar : 0 %> ft
+        </li>
+      <% }); %>
+    </ul>
+  
+    <p>Összérték: <%= totalValue %> ft</p>
 </body>
 </html>
