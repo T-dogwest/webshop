@@ -20,7 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^10.0.0",
+    "@nestjs/common": "^10.3.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.3.0",
     "class-transformer": "^0.5.1",
@@ -30,6 +30,7 @@
     "express-session": "^1.17.3",
     "mysql2": "^3.6.5",
     "nest-mysql2": "^1.0.3",
+    "nestjs": "^0.0.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1"
   },
